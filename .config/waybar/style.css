@@ -123,6 +123,7 @@ button:hover {
   background: @crust
 }
 
+#mpd,
 #clock {
   color: @blue;
   font-weight: 600;
