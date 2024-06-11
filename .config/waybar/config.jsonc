@@ -6,7 +6,7 @@
     "margin-top": 5,
     "spacing": 1,
 
-    "modules-left": ["custom/power", "hyprland/workspaces"],
+    "modules-left": ["custom/power", "hyprland/workspaces", "custom/spotify"],
     "modules-center": ["clock"], 
     "modules-right": ["cpu", "temperature", "memory", "disk", "pulseaudio", "network", "tray"],
 
@@ -27,6 +27,14 @@
             "4": "4",
             "5": "5",
          },
+    },
+    "custom/spotify": {
+      "exec": "/usr/bin/python3 /home/ayman/.config/scripts/mediaplayer.py --player spotify",
+      "format": "{}  ",
+      "return-type": "json",
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous"
     },
     "tray": {
         "icon-size": 18,
