@@ -28,6 +28,7 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+      vim.diagnostic.config({ virtual_text = false, virtual_text= { current_line = true }, })
 		end,
 	},
 }
