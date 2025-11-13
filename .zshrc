@@ -3,12 +3,12 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -e
+bindkey -v
 
 source $HOME/.config/marlonrichert/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # End of lines added by compinstall
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/catppuccin_frappe.omp.json)"
+eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/catppuccin_macchiato.omp.json')"
 
 # Set up fzf key bindings and fuzzy completion
 bindkey -s "^f" "^u$HOME/.config/scripts/fzftmux.sh^M"
@@ -23,8 +23,11 @@ znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 
+ZSH_AUTOSUGGEST_USE_ASYNC=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=$PATH:/Users/aymanhachkal/.spicetify
 
-. "$HOME/.local/share/../bin/env"
+
+# Created by `pipx` on 2025-09-17 00:43:40
+export PATH="$PATH:/home/ayman/.local/bin"
