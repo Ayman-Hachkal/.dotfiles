@@ -27,7 +27,12 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=$PATH:/Users/aymanhachkal/.spicetify
+PS1="Ayman" 
 
 
 # Created by `pipx` on 2025-09-17 00:43:40
 export PATH="$PATH:/home/ayman/.local/bin"
+
+export VCPKG_ROOT=/path/to/vcpkg
+export PATH=$VCPKG_ROOT:$PATH
+

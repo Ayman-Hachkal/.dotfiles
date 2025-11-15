@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 
 return {
-  font_size = 12,
+  font_size = 15,
 	window_padding = {
 		left = 0,
 		right = 0,
@@ -13,5 +13,4 @@ return {
 	enable_tab_bar = false,
 	font = wezterm.font 'MAPLE MONO NF',
 	color_scheme = "Catppuccin Mocha", -- or Macchiato, Frappe, Latte
-  enable_wayland = true,
 }
