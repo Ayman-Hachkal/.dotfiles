@@ -5,3 +5,4 @@ vim.cmd("set shiftwidth=2")
 vim.g.mapleader = ';'        -- even more opts
 vim.wo.relativenumber = true
 vim.opt.wrap = false
+vim.opt.swapfile = false
