@@ -17,7 +17,14 @@ return {
     statuscolumn = { enabled = false },
     words = { enabled = true },
     dim = { enabled = true},
-    terminal = { enabled = true},
+    terminal = { 
+      enabled = true,
+      auto_close = false, 
+      win = {
+        position = "float", -- or "bottom"
+        border = "rounded",
+        },
+      },
   },
   keys = {
     { "<leader>t", function() Snacks.terminal.get() end},
