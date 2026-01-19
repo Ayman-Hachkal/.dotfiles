@@ -1,6 +1,6 @@
 return {
-  "rebelot/kanagawa.nvim",
-  config = function()
+  "rebelot/kanagawa.nvim", { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  kanagawa_config = function()
     -- Default options:
       local config = require('kanagawa')
       config.setup({
@@ -27,7 +27,56 @@ return {
           light = "lotus"
       },
   })
-  -- setup must be called before loading
-  vim.cmd("colorscheme kanagawa")
-    end
+  end,
+
+  config = function()
+      require("catppuccin").setup({
+        flavour = "mocha",
+        background = {
+          dark = "mocha",
+          light = "latte"
+        },
+        transparent_background = false,
+        float = {
+          transparent = true,
+          solid = true,
+        },
+        dim_inactive = {
+          enabled = true, -- dims the background color of inactive window
+          shade = "dark",
+          percentage = 0.15, -- percentage of the shade to apply to the inactive window
+        },
+        auto_integrations = true,
+        intergrations = {
+          treesitter = true,
+          native_lsp = {
+            enabled = true,
+            virtual_text = {
+              errors = { "italic" },
+              hints = { "italic" },
+              warnings = { "italic" },
+              information = { "italic" },
+            },
+            underlines = {
+              errors = { "underline" },
+              hints = { "underline" },
+              warnings = { "underline" },
+              information = { "underline" },
+            },
+          },
+          lsp_trouble = false,
+          lsp_saga = false,
+          gitgutter = false,
+          snacks = { 
+            enabled = true,
+              auto_close = false, 
+              win = {
+                position = "float", -- or "bottom"
+                border = "rounded",
+              },
+            },
+        }
+    })
+  vim.cmd.colorscheme("catppuccin")
+  end,
 }

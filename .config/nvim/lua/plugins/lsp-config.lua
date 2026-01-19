@@ -29,8 +29,7 @@ return {
         capabilities = capabilities,
       })
       vim.lsp.enable({"jdtls"})
-      -- pyright
-      vim.lsp.config("basedpyright", {
+      pyright = vim.lsp.config("basedpyright", {
         capabilities = capabilities,
         settings = {
                 basedpyright = {
@@ -48,7 +47,7 @@ return {
                     },
                 },
             },
-      })
+        })
       vim.lsp.enable({"basedpyright"})
       
       --clangd 
