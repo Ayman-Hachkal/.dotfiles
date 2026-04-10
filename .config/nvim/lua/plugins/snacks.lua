@@ -25,11 +25,11 @@ return {
     input = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = true },
-    scroll = { enabled = true },
+    scroll = { enabled = false},
     statuscolumn = { enabled = false },
     words = { enabled = true },
-    dim = { enabled = false},
-    terminal = { 
+    dim = { enabled = true},
+    terminal = {
       enabled = true,
       auto_close = false, 
       win = {

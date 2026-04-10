@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  "tree-sitter/tree-sitter-html",
   build = ":TSUpdate",
   config = function()
       require("nvim-treesitter.configs").setup({
